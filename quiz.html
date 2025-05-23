@@ -1,0 +1,28 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>財務諸表クイズ</title>
+</head>
+<body>
+  <h1>財務諸表の見方クイズ</h1>
+  <p id="question">Q1. 貸借対照表において「資産 ＝ ?」は？</p>
+  <button onclick="checkAnswer('A')">A. 負債 + 純資産</button><br>
+  <button onclick="checkAnswer('B')">B. 売上 - 費用</button><br>
+  <button onclick="checkAnswer('C')">C. 現金 + 売上高</button><br>
+
+  <p id="result"></p>
+
+  <script>
+    function checkAnswer(answer) {
+      const result = document.getElementById('result');
+      if (answer === 'A') {
+        result.textContent = "正解！資産 ＝ 負債 + 純資産 です。";
+      } else {
+        result.textContent = "不正解！もう一度考えてみよう。";
+      }
+    }
+  </script>
+</body>
+</html>
